@@ -1,0 +1,10 @@
+{
+  "name": "Pandomim-react-app",
+  "dependencies": {
+    "react": "0.12.2",
+    "bootstrap": "3.3.1"
+  },
+  "devDependencies": {
+    "kendo-ui": "kendo-ui-core#~2015.2.902+SP2"
+  }
+}
