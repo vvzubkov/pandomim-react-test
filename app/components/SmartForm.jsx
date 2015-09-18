@@ -3,7 +3,17 @@
 
     module.exports = React.createClass({
         _handleClickUpdate: function () {
+            var $grid = $("#grid");
+            var $window = $("#window");
 
+            var userDataSource = this.props.userDataSource;
+            var userViewModel = this.props.userViewModel;
+
+            var dataItem = userDataSource.get(userViewModel.get("pk"));
+            dataItem.set("name", userViewModel.get("name"));
+            dataItem.set("email", userViewModel.get("email"));
+            dataItem.set("is_admin", userViewModel.get("is_admin"));
+            $window.data("kendoWindow").close();
         },
         _handleClickClose: function () {
             $("#window").data("kendoWindow").close();
